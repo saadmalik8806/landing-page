@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+ 
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+ 
+<link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css">
+<title>Bootstrap hero header with lead form</title>
+</head>
+<body>
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.btn {
+    padding: 14px 26px;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.btn-danger {
+    background-color: #e34c43;
+    border-color: #e34c43;
+}
+.banner-image{
+    background: linear-gradient(rgba(29, 38, 113, 0.1), rgba(195, 55, 100, 0.1)), url(tasnim-umar-blbwkwHPItE-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.banner-image {
+    position: relative;
+  }
+  .f-contact {
+    display: flex;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+.f-contact .icon {
+    float: left;
+    margin-top: 7px;
+    margin-right: 15px;
+    width: 40px;
+}
+.f-contact a {
+    color: #fffc !important;
+}
+.f-contact i {
+    width: 40px;
+    height: 40px;
+    background: #fff;
+    line-height: 40px;
+    color: #412720 !important;
+    text-align: center;
+    border-radius: 50%;
+    float: left;
+}
+li {
+    list-style: none;
+}
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+.lead-form{
+    background-color:#FFF;
+    max-width:500px;
+    height:auto;
+    margin:0 auto;
+}
+::placeholder {
+font-size:14px;
+font-weight:500;
+}
+.form-control {
+    border-color: #ebebeb;
+}
+.form-control-lg {
+    height: calc(1.6em + 1rem + 2px);
+}
+@media(max-width:780px){
+.display-4{
+font-size:36px;    
+}
+}
+</style>
+
+<div class="banner-image py-5">
+    <div class="overlay"></div>
+
+  <div class="container py-5">
+    <div class="row py-5 align-items-center">
+      <div class="col-lg-6">
+        <h5 class="display-4 mb-4 font-weight-bold text-center text-lg-left" style="color: #fff !important;">Stay connected with your customers</h5> 
+          <p class="lead mb-5 text-black-50 text-center text-lg-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nunc nisi, suscipit id dapibus sit amet, lacinia nec lorem. Aenean eget urna rutrum.</p> 
+          <div class="d-flex justify-content-center justify-content-lg-start mb-4">
+        <a href="" class="btn btn-lg btn-danger mr-2 custom-btn"> View More</a>
+        <!-- <a href="" class="btn btn-lg btn-outline-danger"> Contact Us</a> -->
+        </div>
+                
+      </div>
+      <div class="col-lg-6 text-center mt-5 mt-lg-0">
+        <div class="lead-form rounded p-5"> 
+        <form id="contact-form">
+                                <div>
+                                    <h3 class="font-weight-bold">Submit You'r Enquiry</h3>
+                                    <h6 class="text-black-50 pt-3 pb-4 small font-weight-bold">Fill all fields so we can get some info about you.<br>We'll never send you spam</h6>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-lg" name="name" placeholder="Name" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="email" class="form-control form-control-lg" name="email" placeholder="Email" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="text" class="form-control form-control-lg" name="phone" placeholder="Phone" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-12">
+                                        <button class="btn btn-danger btn-lg w-100 mt-3 mt-sm-4 custom-btn" type="submit">Send Message <i class="lni lni-arrow-right ml-2"></i></button>
+                                      
+                                    </div>
+                                </div>
+                            </form>
+         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<section class="py-5 d-flex align-items-center" style="background-color: #f1f4f9 !important; height: auto;">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="s-about-img p-relative wow fadeInRight animated" data-animation="fadeInRight" data-delay=".4s" style="visibility: visible; animation-name: fadeInRight;">
+                    <img src="about.jpg" alt="img" style="height: 100%; max-height: 666px;">
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-12 col-sm-12">
+                <div class="about-content s-about-content wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s" style="visibility: visible; animation-name: fadeInLeft;">
+                    <div class="about-title second-title pb-25">
+                        <h2>Now We Are Globally Everywhere</h2>
+                    </div>
+                    <p style="text-align:justify">AL-SHAMS INTERNATIONAL is a Reliable and Experience organization that provides Umrah and Ziyarat services. We are founded on some ground rules of customer comfort, quality-assurance, well-management, and professional planning. The Umrah and Ziyarat packages at Al-Shams International are carefully designed to suit the needs and convenience of our Muslim brothers and sisters. With Allah’s Grace, our professional approach makes us unique in delivering what we claim for.</p>
+                    <p style="text-align:justify">We at Al-Shams International take pride in our quality-proven services and delivering the visionary of eases and comfort for all our customers. Our dedicated team of professionals is expertise in tour and travels for understanding the nitty-gritty concerning Umrah and Ziyarat. All praise to Allah for blessing us with a team of leaders who are heart and mind conscious in planning different packages. All our plans are customer-oriented as we keep their safety and priority first.</p>
+                    <div class="about-content3 mt-30">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-md-12">
+                                <ul class="green mb-30">
+                                    <li> Free Tarbiyat Camp With Lunch for all departures</li>
+                                    <li> 24 Hours Hospitality</li>
+                                    <li> All Certified Staff</li>
+                                    <li> Your Pilgrimage, Our Responsibility</li>
+                                    <li> Join Us On This Spiritual Journey</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <div class="slider-btn">
+                                    <a href="#" class="btn ss-btn smoth-scroll custom-btn" style="color: #fff;">Discover More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+  
+ <!-- New Section 2 -->
+<section class="py-5" style="margin-top: 20px; background-image: url('testimonial-bg.png'); background-size: cover;">
+    <div class="container py-3">
+        <!-- Responsive Heading -->
+        <h2 class="display-4 mb-4 text-center text-sm-left" style="margin-bottom: 10px; color: #0c2d62;">Umrah Packages 2023-24</h2>
+
+        <!-- First Card -->
+        <div class="card border-0" style="background-color: transparent;">
+            <div class="row">
+                <!-- First Card Image -->
+                <div class="col-md-5">
+                    <img class="card-img-top" src="domestic-pilgrims-tour.jpg" alt="Card image">
+                </div>
+                <!-- First Card Content -->
+                <div class="col-md-7 px-3">
+                    <div class="card-block px-6">
+                        <h4 class="card-title">Horizontal Card with Image - Bootstrap 4 </h4>
+                        <p class="card-text">
+                            This is a horizontal card with a single image. You can customize the text and content as needed.
+                        </p>
+                        <br>
+                        <a href="#" class="mt-auto btn btn-primary custom-btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Second Card -->
+        <div class="card border-0 mt-4" style="background-color: transparent;">
+            <div class="row">
+                <!-- Second Card Image -->
+                <div class="col-md-5">
+                    <img class="card-img-top" src="domestic-tour.jpg" alt="Card image">
+                </div>
+                <!-- Second Card Content -->
+                <div class="col-md-7 px-3">
+                    <div class="card-block px-6">
+                        <h4 class="card-title">Second Horizontal Card with Image - Bootstrap 4 </h4>
+                        <p class="card-text">
+                            This is the second horizontal card with a single image. You can customize the text and content as needed.
+                        </p>
+                        <br>
+                        <a href="#" class="mt-auto btn btn-primary custom-btn">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .custom-btn {
+        background-color: #1a2e46;
+        border-color: #1a2e46;
+    }
+
+    .custom-btn:hover {
+        background-color: #2e1913;
+        border-color: #2e1913;
+    }
+</style>
+
+
+
+
+<!-- New Section 3 -->
+<section class="py-5">
+    <div class="container">
+        <p>TESTIMONIALS</p>
+        <h1>What Our Clients Say!</h1>
+        <!-- <p class="text-muted">This pen is a part of the <a href="https://bootstrapious.com/p/bootstrap-tips-and-tricks" target="_blank">Bootstrap tips and tricks article</a>.</p> -->
+
+        <div class="row">
+            <!-- First Video Card -->
+            <div class="col-sm-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/QOAi3RNZooQ?si=knRl5INVube8FyQa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+
+            <!-- Second Video Card (Copy and Paste the Code for Each Video Card) -->
+            <div class="col-sm-6">
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ANOTHER_VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <!-- New Section 4 -->
+  <!-- New Section 4 -->
+<style>
+   footer.footer-bg {
+    background-color: #644222;
+    background-image: url('footer-bg.png'); /* Adjust the path to your image */
+    color: #fff;
+    background-position: -180px center!important;
+    background-size: 100% 100%;
+}
+
+.f-contact li {
+    float: left;
+    margin-bottom: 15px !important;
+    width: 100%;
+}
+    .footer-top {
+        padding-top: 90px;
+        padding-bottom: 40px;
+    }
+
+    .footer-widget {
+        margin-bottom: 30px;
+    }
+
+    .f-widget-title img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .f-contact ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .f-contact li {
+        margin-bottom: 15px;
+    }
+
+    .footer-link ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .footer-link li {
+        margin-bottom: 10px;
+    }
+
+    .footer-link a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    .footer-link a:hover {
+        color: #e44d26;
+    }
+
+    .copyright-wrap {
+        background-color: #3d2c13;
+        color: #fff;
+        padding: 15px 0;
+    }
+
+    .footer-social a {
+        color: #fff;
+        margin-right: 10px;
+        font-size: 18px;
+        transition: color 0.3s ease;
+    }
+
+    .footer-social a:hover {
+        color: #e44d26;
+    }
+    .f-widget-title img {
+    width: 220px;
+}
+.img, img {
+    max-width: 100%;
+    transition: all 0.3s ease-out 0s;
+}
+</style>
+
+<footer class="footer-bg footer-p">
+    <div class="footer-top pt-90 pb-40">
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-xl-4 col-lg-4 col-sm-6">
+                    <div class="footer-widget mb-30">
+                        <div class="f-widget-title mb-30">
+                            <img src="logo-f.png" alt="img">
+                        </div>
+                        <div class="f-contact">
+                            <ul>
+                                <li>
+                                    <i class="icon fal fa-phone"></i>
+                                    <a href="tel:9284460490"><span>+91 9284460490</span></a>
+                                </li>
+                                <li>
+                                    <i class="icon fal fa-envelope"></i>
+                                    <span>
+                                        <a href="mailto:info@alshamsinternational.com">info@alshamsinternational.com</a><br>
+                                        <a href="mailto:booking@alshamsinternational.com">booking@alshamsinternational.com</a>
+                                    </span>
+                                </li>
+                                <li>
+                                    <i class="icon fal fa-map-marker-check"></i>
+                                    <span>Maryam Paradise Opp. to Lifeline Hospital,<br> Kausar Baugh, Kondhwa, Pune-48</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-sm-6">
+                    <div class="footer-widget mb-30">
+                        <div class="f-widget-title">
+                            <h2>Our Links</h2>
+                        </div>
+                        <div class="footer-link">
+                            <ul>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="gallery.html">Gallery</a></li>
+                                <li><a href="contact.html">Contact Us</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-sm-6">
+                    <div class="footer-widget mb-30">
+                        <div class="f-widget-title">
+                            <h2>Our Packages</h2>
+                        </div>
+                        <div class="footer-link">
+                            <ul>
+                                <li><a href="umrah.html">Umrah Packages</a></li>
+                                <li><a href="baghdad-packages.html">Baghdad Package</a></li>
+                                <li><a href="11vi-sharif.html">11vi Sharif 2023</a></li>
+                                <li><a href="iran-iraq-syria.html">IRAN, IRAQ &amp; SYRIA</a></li>
+                                <li><a href="#">Domestic Pilgrims Packages</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xl-2 col-lg-2 col-sm-6">
+                    <div class="footer-widget mb-30">
+                        <div class="f-widget-title">
+                            <h2>Our Services</h2>
+                        </div>
+                        <div class="footer-link">
+                            <ul>
+                                <li> <a href="international-tours.html">International Tours</a></li>
+                                <li> <a href="domestic-tours.html">Domestic Tours</a></li>
+                                <li> <a href="hotel_reservation.html">Hotel Reservations</a></li>
+                                <li> <a href="passport-visa-services.html">Passport &amp; Visa Assistance</a></li>
+                                <li> <a href="forex-assistance.html">Forex Assistance</a></li>
+                                <li> <a href="airline-ticketing.html">Air Ticketing</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+<!-- Optional JavaScript --> 
+<!-- jQuery first, then Popper.js, then Bootstrap JS --> 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" ></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" ></script>
+</body>
+</html>
