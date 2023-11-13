@@ -1,245 +1,476 @@
+
 <!doctype html>
 <html lang="en">
 <head>
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
- 
-<!-- Bootstrap CSS -->
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
- 
-<link href="https://cdn.lineicons.com/2.0/LineIcons.css" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css">
-<title>Bootstrap hero header with lead form</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <!-- Use the full version of jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<body>
 <style type="text/css">
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
-body {
-    font-family: 'Roboto', sans-serif;
-}
-.btn {
-    padding: 14px 26px;
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-}
-.btn-danger {
-    background-color: #e34c43;
-    border-color: #e34c43;
-}
-.banner-image{
-    background: linear-gradient(rgba(29, 38, 113, 0.1), rgba(195, 55, 100, 0.1)), url(tasnim-umar-blbwkwHPItE-unsplash.jpg);
-    background-size: cover;
-    background-position: center;
-}
-.banner-image {
-    position: relative;
-  }
-  .f-contact {
-    display: flex;
-}
-ul {
-    margin: 0px;
-    padding: 0px;
-}
-.f-contact .icon {
-    float: left;
-    margin-top: 7px;
-    margin-right: 15px;
-    width: 40px;
-}
-.f-contact a {
-    color: #fffc !important;
-}
-.f-contact i {
-    width: 40px;
-    height: 40px;
-    background: #fff;
-    line-height: 40px;
-    color: #412720 !important;
-    text-align: center;
-    border-radius: 50%;
-    float: left;
-}
-li {
-    list-style: none;
-}
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-.lead-form{
-    background-color:#FFF;
-    max-width:500px;
-    height:auto;
-    margin:0 auto;
-}
-::placeholder {
-font-size:14px;
-font-weight:500;
-}
-.form-control {
-    border-color: #ebebeb;
-}
-.form-control-lg {
-    height: calc(1.6em + 1rem + 2px);
-}
-@media(max-width:780px){
-.display-4{
-font-size:36px;    
-}
-}
-</style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+    .btn {
+        padding: 14px 26px;
+        font-weight: 700;
+        font-size: 13px;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+    }
+    .banner-image{
+        background: linear-gradient(rgba(29, 38, 113, 0.1), rgba(195, 55, 100, 0.1)), url(images/home/tasnim-umar-blbwkwHPItE-unsplash.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .banner-image {
+        position: relative;
+      }
+      .f-contact {
+        display: flex;
+    }
+    ul {
+        margin: 0px;
+        padding: 0px;
+    }
+    .f-contact .icon {
+        float: left;
+        margin-top: 7px;
+        margin-right: 15px;
+        width: 40px;
+    }
+    .f-contact a {
+        color: #fffc !important;
+    }
+    .f-contact i {
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        line-height: 40px;
+        color: #412720 !important;
+        text-align: center;
+        border-radius: 50%;
+        float: left;
+    }
+    li {
+        list-style: none;
+    }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+    .lead-form{
+        background-color:#FFF;
+        max-width:500px;
+        height:auto;
+        margin:0 auto;
+    }
+    ::placeholder {
+    font-size:14px;
+    font-weight:500;
+    }
+    .form-control {
+        border-color: #ebebeb;
+    }
+    .form-control-lg {
+        height: calc(1.6em + 1rem + 2px);
+    }
+    @media(max-width:780px){
+    .display-4{
+    font-size:36px;    
+    }
+    }
+    </style>
+<body>
+    
+<div id="google_element"></div>
 
+<!-- The Modal -->
+
+<div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+        <div class="modal-content" style="background: url('images/home/1-01.png') center center; background-size: cover; height: 720px; width: 800px; border: none; position: relative;">
+            <div class="modal-header custom-modal-header">
+                <button type="button" class="close ml-5" data-dismiss="modal" aria-label="Close" style="margin-left: 34rem !important; color:#fff;">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" style="height: 100%; margin-bottom:20px;">
+                <!-- Your form code goes here -->
+                <form  id="contactForm" style="width: 43%; margin: auto; margin-top: 71px;">
+                    <h3 class="modal-title text-white text-center" id="contactModalLabel" style="color: #000 !important; margin-bottom:10px;">Contact Us</h3>
+                    <div>
+                        <h6 class="text-white text-center pt-3 pb-4 small font-weight-bold" style="color: #000 !important;">Premium Umrah Package Bismillah Karo</h6>
+                        <div id="responseMessage"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-lg" id="name" name="name" placeholder="Enter Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-lg" id="contact" name="contact" placeholder="Enter Mobile Number" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control form-control-lg" id="city" name="city" placeholder="Enter Your City" required>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-danger btn-lg w-100 mt-3 mt-sm-4 custom-btn" type="submit" id="submit-btn">Inquire Now <i class="lni lni-arrow-right ml-2"></i></button>
+                        </div>
+                    </div>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<style>
+    .custom-modal-header {
+        border: none;
+    }
+    .custom-modal-header {
+        border: none;
+    }
+
+  /* Extra small devices (phones) */
+  @media only screen and (max-width: 576px) {
+        #contactModal .modal-dialog {
+            max-width: 90%;
+            margin: auto;
+        }
+
+        #contactModal .modal-content {
+            width: 100%;
+            height: 100%;
+            background-size: contain;
+        }
+
+        #contactForm {
+            width: 90%;
+            margin: auto;
+        }
+    }
+
+    /* Small devices (landscape phones, 576px and up) */
+    @media only screen and (min-width: 577px) and (max-width: 767px) {
+        #contactModal .modal-dialog {
+            max-width: 80%;
+            margin: auto;
+        }
+
+        #contactForm {
+            width: 80%;
+            margin: auto;
+        }
+    }
+
+    /* Medium devices (tablets, 768px and up) */
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+        #contactModal .modal-dialog {
+            max-width: 70%;
+            margin: auto;
+        }
+
+        #contactForm {
+            width: 70%;
+            margin: auto;
+        }
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media only screen and (min-width: 992px) and (max-width: 1199px) {
+        #contactModal .modal-dialog {
+            max-width: 60%;
+            margin: auto;
+        }
+
+        #contactForm {
+            width: 60%;
+            margin: auto;
+        }
+    }
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media only screen and (min-width: 1200px) {
+        #contactModal .modal-dialog {
+            max-width: 50%;
+            margin: auto;
+        }
+
+        #contactForm {
+            width: 50%;
+            margin: auto;
+        }
+    }
+     /* Responsive styles */
+     @media (max-width: 576px) {
+        #contactModal .modal-dialog {
+            max-width: 100%;
+            margin: auto;
+        }
+
+        #contactModal .modal-content {
+            width: 100vw;
+            height: 100vh;
+            background-size: cover;
+        }
+
+        #contactForm {
+            width: 80%;
+            margin: auto;
+            margin-top: 5vh;
+        }
+    }
+</style>
+<!-- end modal  -->
 <div class="banner-image py-5">
     <div class="overlay"></div>
-
-  <div class="container py-5">
-    <div class="row py-5 align-items-center">
-      <div class="col-lg-6">
-        <h5 class="display-4 mb-4 font-weight-bold text-center text-lg-left" style="color: #fff !important;">Stay connected with your customers</h5> 
-          <p class="lead mb-5 text-black-50 text-center text-lg-left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nunc nisi, suscipit id dapibus sit amet, lacinia nec lorem. Aenean eget urna rutrum.</p> 
-          <div class="d-flex justify-content-center justify-content-lg-start mb-4">
-        <a href="" class="btn btn-lg btn-danger mr-2 custom-btn"> View More</a>
-        <!-- <a href="" class="btn btn-lg btn-outline-danger"> Contact Us</a> -->
+    <div class="container py-5">
+        <div class="row py-5 align-items-center">
+            <div class="col-lg-12 text-center">
+                <h5 class="display-4 mb-4 font-weight-bold" style="color: #fff !important;">Best Umrah Package with Taif Ziyarat</h5>
+                <p class="lead mb-5 text-black-50" style="color: #fff !important;">
+                Book with Best Umrah Tour Company in Pune 
+                </p>
+                <div class="d-flex justify-content-center mb-4">
+                    <button class="btn btn-lg btn-danger mr-2 custom-btn" data-toggle="modal" data-target="#contactModal">Inquire Now</button>
+                </div>
+            </div>
         </div>
-                
-      </div>
-      <div class="col-lg-6 text-center mt-5 mt-lg-0">
-        <div class="lead-form rounded p-5"> 
-        <form id="contact-form">
-                                <div>
-                                    <h3 class="font-weight-bold">Submit You'r Enquiry</h3>
-                                    <h6 class="text-black-50 pt-3 pb-4 small font-weight-bold">Fill all fields so we can get some info about you.<br>We'll never send you spam</h6>
-                                </div>
-                                <div class="row">
-                                    <div class="col-12">
-                                        <div class="form-group">
-                                            <input type="text" class="form-control form-control-lg" name="name" placeholder="Name" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="email" class="form-control form-control-lg" name="email" placeholder="Email" required>
-                                        </div>
-                                        <div class="form-group">
-                                            <input type="text" class="form-control form-control-lg" name="phone" placeholder="Phone" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-12">
-                                        <button class="btn btn-danger btn-lg w-100 mt-3 mt-sm-4 custom-btn" type="submit">Send Message <i class="lni lni-arrow-right ml-2"></i></button>
-                                      
-                                    </div>
-                                </div>
-                            </form>
-         </div>
-      </div>
     </div>
-  </div>
 </div>
 <section class="py-5 d-flex align-items-center" style="background-color: #f1f4f9 !important; height: auto;">
     <div class="container">
         <div class="row justify-content-center align-items-center">
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="s-about-img p-relative wow fadeInRight animated" data-animation="fadeInRight" data-delay=".4s" style="visibility: visible; animation-name: fadeInRight;">
-                    <img src="about.jpg" alt="img" style="height: 100%; max-height: 666px;">
+                    <img src="images/home/about.jpg" alt="img" style="height: 100%; max-height: 666px;">
                 </div>
             </div>
             <div class="col-lg-6 col-md-12 col-sm-12">
                 <div class="about-content s-about-content wow fadeInLeft animated" data-animation="fadeInLeft" data-delay=".4s" style="visibility: visible; animation-name: fadeInLeft;">
                     <div class="about-title second-title pb-25">
-                        <h2>Now We Are Globally Everywhere</h2>
+                        <h2>Umrah Executive Package - December Special</h2>
                     </div>
-                    <p style="text-align:justify">AL-SHAMS INTERNATIONAL is a Reliable and Experience organization that provides Umrah and Ziyarat services. We are founded on some ground rules of customer comfort, quality-assurance, well-management, and professional planning. The Umrah and Ziyarat packages at Al-Shams International are carefully designed to suit the needs and convenience of our Muslim brothers and sisters. With Allah’s Grace, our professional approach makes us unique in delivering what we claim for.</p>
-                    <p style="text-align:justify">We at Al-Shams International take pride in our quality-proven services and delivering the visionary of eases and comfort for all our customers. Our dedicated team of professionals is expertise in tour and travels for understanding the nitty-gritty concerning Umrah and Ziyarat. All praise to Allah for blessing us with a team of leaders who are heart and mind conscious in planning different packages. All our plans are customer-oriented as we keep their safety and priority first.</p>
+                    <p style="text-align:justify">Embark on a spiritual journey this December with our exclusive Umrah Executive Package. Fly hassle-free with a direct non-stop flight and experience the sacred rituals with the added bonus of Taif Ziyarat.</p>
+                   
                     <div class="about-content3 mt-30">
                         <div class="row justify-content-center align-items-center">
                             <div class="col-md-12">
                                 <ul class="green mb-30">
-                                    <li> Free Tarbiyat Camp With Lunch for all departures</li>
-                                    <li> 24 Hours Hospitality</li>
-                                    <li> All Certified Staff</li>
-                                    <li> Your Pilgrimage, Our Responsibility</li>
-                                    <li> Join Us On This Spiritual Journey</li>
+                                <li style="font-weight: bold;">Package Details:</li>
+                                    <li><span  style="font-weight: bold;">Duration:</span> 15 Days</li>
+                                    <li> <span style="font-weight: bold;">Flight:</span> Direct non-stop</li>
+                                    <li> <span style="font-weight: bold;">Visa: </span> Inclusive, with insurance</li>
                                 </ul>
+                                <ul class="green mb-30">
+                                    <li style="font-weight: bold;">Accommodation:</li>
+                                    <li>  Makkah Hotel: AL TAJ AL RAQI (5 min walkable distance from Haram Sharif)</li>
+                                    <li>  Madina: Jawaharat Al Rasheed (5 min walkable distance/Similar)</li>
+                                    <li> <span style="font-weight: bold;">Dining:</span> Buffet-style Executive Dining</li>
+                                </ul>
+                                <p style="text-align:justify;">Book Now:</p>
+<p style="text-align:justify">Contact us at 9284460490 or 9209450470</p>
+<p style="text-align:justify">Visit our website: www.alshamsinternational.com</p>
+<p style="text-align:justify">Email us at: alshams.umrah@gmail.com</p>
                             </div>
+                       
                             <div>
                                 <div class="slider-btn">
-                                    <a href="#" class="btn ss-btn smoth-scroll custom-btn" style="color: #fff;">Discover More</a>
+                                    <button href="#" class="btn ss-btn smoth-scroll custom-btn" data-toggle="modal" data-target="#contactModal" style="color: #fff; margin-top: 65px;">Book Now</button>
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
+                    
                 </div>
             </div>
         </div>
     </div>
 </section>
 
+<style>
+    .single-services .icon {
+    margin-top: 30px;
+}
+    .ser-m {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 30px;
+}
+.single-services .icon li {
+    display: inline-block;
+    margin-right: 34px;
+}
+.single-services {
+    background: #fff;
+    box-shadow: 0px 5px 17px 0px rgba(0, 0, 0, 0.07);
+    position: relative;
+    margin: 0 15px;
+}
+a, h1, h2, h3, h4, h5, h6, p, span {
+    overflow-wrap: break-word;
+}
+.services-thumb img {
+	width: 100%;
+}
+.services-content {
+    padding: 30px 40px 60px;
+    padding-bottom: 55px;
+}
+.single-services .day-book {
+    background: #1a2e46;
+    font-family: 'Jost', sans-serif;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: -70px;
+    position: relative;
+}
 
+.blog-btn a,.blog__btn a {
+display: inline-block;
+color: #644222;
+text-align: center;
+font-size: 15px;
+border-bottom: 3px solid #644222;
+text-transform: uppercase;
+font-weight: 500;
+}
+a, h1, h2, h3, h4, h5, h6, p, span {
+    overflow-wrap: break-word;
+}
+ul {
+    margin: 0px;
+    padding: 0px;
+}
+.single-services .day-book li {
+    display: inline-block;
+    width: 49.2%;
+    text-align: center;
+    padding: 20px 0;
+    /* border-right: 2px solid #26b3fb; */
+}
+li {
+    list-style: none;
+}
+.single-services .day-book a {
+    color: #fff;
+}
+.single-services .icon li img {
+    height: 20px;
+}
+.additional-details {
+            display: none;
+            color: #000; /* Adjust text color as needed */
+            background-color: rgba(0, 0, 0, 0.8); /* Adjust background color and transparency as needed */
+            padding: 10px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+</style>
 
-
-
-
-
-
-
-
-  
  <!-- New Section 2 -->
-<section class="py-5" style="margin-top: 20px; background-image: url('testimonial-bg.png'); background-size: cover;">
+ <section class="py-5" style="margin-top: 20px; background-image: url('images/home/testimonial-bg.png'); background-size: cover;">
     <div class="container py-3">
         <!-- Responsive Heading -->
         <h2 class="display-4 mb-4 text-center text-sm-left" style="margin-bottom: 10px; color: #0c2d62;">Umrah Packages 2023-24</h2>
-
         <!-- First Card -->
-        <div class="card border-0" style="background-color: transparent;">
+        <div class="container">         
             <div class="row">
-                <!-- First Card Image -->
-                <div class="col-md-5">
-                    <img class="card-img-top" src="domestic-pilgrims-tour.jpg" alt="Card image">
-                </div>
-                <!-- First Card Content -->
-                <div class="col-md-7 px-3">
-                    <div class="card-block px-6">
-                        <h4 class="card-title">Horizontal Card with Image - Bootstrap 4 </h4>
-                        <p class="card-text">
-                            This is a horizontal card with a single image. You can customize the text and content as needed.
-                        </p>
-                        <br>
-                        <a href="#" class="mt-auto btn btn-primary custom-btn">Read More</a>
-                    </div>
-                </div>
+        <!-- Economy Package -->
+<div class="image-column col-xl-6 col-lg-12 col-md-12">
+    <div class="single-services ser-m mb-30">
+        <div class="services-thumb">
+            <a class="gallery-link popup-image" href="img/e-umrah.jpg">
+                <img src="images/home/e-umrah.jpg" alt="img">
+            </a>
+        </div>
+        <div class="services-content text-center">
+            <div class="day-book">
+                <ul>
+                    <li class="price">Rs. 89,000/-(Including GST)</li>
+                </ul>
+            </div>
+            <h4><a href="economy-package.html">Premium package</a></h4>    
+            <li><img src="images/kaaba.png" alt="img">Makkah Hotel - Taj Al Raqi
+                <p style="margin-left: 75px;">(300mtr 5min Walkable)</p>
+            </li><br>
+            <li><img src="images/madina.png" alt="img">Madina - Jawaharat Al Rasheed 
+                <p style="margin-left: 75px;">(300mtr 5min Walkable Distance / Similar)</p>
+            </li>
+            <div class="icon">
+                <ul>
+                    <li><img src="images/i-1.png" alt="img"></li>
+                    <li><img src="images/i-2.png" alt="img"></li>
+                </ul>
+            </div><br>
+            <div class="blog__btn economy-btn">
+                <!-- Responsive Book Now Button -->
+                <button href="#" class="btn ss-btn smoth-scroll custom-btn btn-block d-sm-none" data-toggle="modal" data-target="#contactModal" style="color: #fff;">Book Now</button>
+                <button href="#" class="btn ss-btn smoth-scroll custom-btn d-none d-sm-inline" data-toggle="modal" data-target="#contactModal" style="color: #fff;">Book Now</button>
+                <!-- Additional details remain the same -->
             </div>
         </div>
+    </div>
+</div>
+<!-- End Economy Package -->
 
-        <!-- Second Card -->
-        <div class="card border-0 mt-4" style="background-color: transparent;">
-            <div class="row">
-                <!-- Second Card Image -->
-                <div class="col-md-5">
-                    <img class="card-img-top" src="domestic-tour.jpg" alt="Card image">
-                </div>
-                <!-- Second Card Content -->
-                <div class="col-md-7 px-3">
-                    <div class="card-block px-6">
-                        <h4 class="card-title">Second Horizontal Card with Image - Bootstrap 4 </h4>
-                        <p class="card-text">
-                            This is the second horizontal card with a single image. You can customize the text and content as needed.
-                        </p>
-                        <br>
-                        <a href="#" class="mt-auto btn btn-primary custom-btn">Read More</a>
-                    </div>
-                </div>
+<!-- Deluxe Package -->
+<div class="image-column col-xl-6 col-lg-12 col-md-12">
+    <div class="single-services ser-m mb-30">
+        <div class="services-thumb">
+            <a class="gallery-link popup-image" href="img/d-umrah.jpg">
+                <img src="images/home/d-umrah.jpg" alt="img">
+            </a>
+        </div>
+        <div class="services-content text-center">
+            <div class="day-book">
+                <ul>
+                    <li class="price">Rs. 99,000/- (Including GST)</li>
+                </ul>
+            </div>
+            <h4><a href="deluxe-package.html">Premium package</a></h4>    
+            <li><img src="images/kaaba.png" alt="img">Makkah Hotel- Masra Al Jariah 
+                <p style="margin-left: 75px;">(5min walkable distance from Haram Sharif)</p>
+            </li><br>
+            <li><img src="images/madina.png" alt="img">Madina - Jawaharat Al Rasheed
+                <p style="margin-left: 75px;">(5 min walkable distance /Similar)</p>
+            </li>
+            <div class="icon">
+                <ul>
+                    <li><img src="images/i-1.png" alt="img"></li>
+                    <li><img src="images/i-2.png" alt="img"></li>
+                </ul>
+            </div><br>
+            <div class="blog__btn deluxe-btn">
+                <!-- Responsive Book Now Button -->
+                <button href="#" class="btn ss-btn smoth-scroll custom-btn btn-block d-sm-none" style="color: #fff;" data-toggle="modal" data-target="#contactModal">Book Now</button>
+                <button href="#" class="btn ss-btn smoth-scroll custom-btn d-none d-sm-inline" style="color: #fff;" data-toggle="modal" data-target="#contactModal">Book Now</button>
+                <!-- Additional details remain the same -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Deluxe Package -->
+
             </div>
         </div>
     </div>
 </section>
-
 <style>
     .custom-btn {
         background-color: #1a2e46;
@@ -250,42 +481,34 @@ font-size:36px;
         background-color: #2e1913;
         border-color: #2e1913;
     }
+    .price {
+        text-align: center;
+        font-size: 1.5em;
+        /* color: #e44d26; Adjust the color as needed */
+    }
 </style>
-
-
-
 
 <!-- New Section 3 -->
 <section class="py-5">
     <div class="container">
-        <p>TESTIMONIALS</p>
-        <h1>What Our Clients Say!</h1>
-        <!-- <p class="text-muted">This pen is a part of the <a href="https://bootstrapious.com/p/bootstrap-tips-and-tricks" target="_blank">Bootstrap tips and tricks article</a>.</p> -->
-
         <div class="row">
-            <!-- First Video Card -->
-            <div class="col-sm-6">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/QOAi3RNZooQ?si=knRl5INVube8FyQa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
-            </div>
-
-            <!-- Second Video Card (Copy and Paste the Code for Each Video Card) -->
-            <div class="col-sm-6">
-                <div class="embed-responsive embed-responsive-16by9">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/ANOTHER_VIDEO_ID" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                </div>
+            <!-- Centered Image with Background Shadow -->
+            <div class="col-sm-12 text-center">
+                <img src="images/home/AL_SHAMS_AD_SET_1 (2).png" alt="Testimonial Image" class="img-fluid" style="width: 813px; height: 400px; box-shadow: 0px 4px 8px rgba(0, 0, 0, 1.1);">
             </div>
         </div>
     </div>
 </section>
+
+
+
 
   <!-- New Section 4 -->
   <!-- New Section 4 -->
 <style>
    footer.footer-bg {
     background-color: #644222;
-    background-image: url('footer-bg.png'); /* Adjust the path to your image */
+    background-image: url('images/home/footer-bg.png');
     color: #fff;
     background-position: -180px center!important;
     background-size: 100% 100%;
@@ -366,88 +589,91 @@ font-size:36px;
 </style>
 
 <footer class="footer-bg footer-p">
-    <div class="footer-top pt-90 pb-40">
-        <div class="container">
-            <div class="row justify-content-between">
-                <div class="col-xl-4 col-lg-4 col-sm-6">
-                    <div class="footer-widget mb-30">
-                        <div class="f-widget-title mb-30">
-                            <img src="logo-f.png" alt="img">
-                        </div>
-                        <div class="f-contact">
-                            <ul>
-                                <li>
-                                    <i class="icon fal fa-phone"></i>
-                                    <a href="tel:9284460490"><span>+91 9284460490</span></a>
-                                </li>
-                                <li>
-                                    <i class="icon fal fa-envelope"></i>
-                                    <span>
-                                        <a href="mailto:info@alshamsinternational.com">info@alshamsinternational.com</a><br>
-                                        <a href="mailto:booking@alshamsinternational.com">booking@alshamsinternational.com</a>
-                                    </span>
-                                </li>
-                                <li>
-                                    <i class="icon fal fa-map-marker-check"></i>
-                                    <span>Maryam Paradise Opp. to Lifeline Hospital,<br> Kausar Baugh, Kondhwa, Pune-48</span>
-                                </li>
-                            </ul>
+        <div class="footer-top pt-90 pb-40">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-4 col-lg-4 col-sm-6 order-2 order-sm-1">
+                        <!-- Content goes here -->
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title mb-30">
+                                <!-- Your content here -->
+                                <h4>Contact Information</h4>
+                                <p>Maryam Paradise Opp. to Lifeline Hospital,<br> Kausar Baugh, Kondhwa, Pune-48</p>
+                            </div>
+                            <div class="f-contact mt-3">
+                                <ul>
+                                    <li>
+                                        <a href="tel:9284460490"><span>+91 9284460490</span></a>
+                                    </li>
+                                    <li>
+                                        <span>
+                                            <a href="mailto:info@alshamsinternational.com">info@alshamsinternational.com</a><br>
+                                            <a href="mailto:booking@alshamsinternational.com">booking@alshamsinternational.com</a>
+                                        </span>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-sm-6">
-                    <div class="footer-widget mb-30">
-                        <div class="f-widget-title">
-                            <h2>Our Links</h2>
-                        </div>
-                        <div class="footer-link">
-                            <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="about.html">About Us</a></li>
-                                <li><a href="gallery.html">Gallery</a></li>
-                                <li><a href="contact.html">Contact Us</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-sm-6">
-                    <div class="footer-widget mb-30">
-                        <div class="f-widget-title">
-                            <h2>Our Packages</h2>
-                        </div>
-                        <div class="footer-link">
-                            <ul>
-                                <li><a href="umrah.html">Umrah Packages</a></li>
-                                <li><a href="baghdad-packages.html">Baghdad Package</a></li>
-                                <li><a href="11vi-sharif.html">11vi Sharif 2023</a></li>
-                                <li><a href="iran-iraq-syria.html">IRAN, IRAQ &amp; SYRIA</a></li>
-                                <li><a href="#">Domestic Pilgrims Packages</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-2 col-lg-2 col-sm-6">
-                    <div class="footer-widget mb-30">
-                        <div class="f-widget-title">
-                            <h2>Our Services</h2>
-                        </div>
-                        <div class="footer-link">
-                            <ul>
-                                <li> <a href="international-tours.html">International Tours</a></li>
-                                <li> <a href="domestic-tours.html">Domestic Tours</a></li>
-                                <li> <a href="hotel_reservation.html">Hotel Reservations</a></li>
-                                <li> <a href="passport-visa-services.html">Passport &amp; Visa Assistance</a></li>
-                                <li> <a href="forex-assistance.html">Forex Assistance</a></li>
-                                <li> <a href="airline-ticketing.html">Air Ticketing</a></li>
-                            </ul>
+                    <div class="col-xl-4 col-lg-4 col-sm-6 order-1 order-sm-2">
+                        <!-- Logo goes here -->
+                        <div class="footer-widget mb-30">
+                            <div class="f-widget-title mb-30">
+                                <img src="images/home/logo-f.png" alt="img">
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    
-</footer>
+    </footer>
+    <style>
+        /* Add your custom styles for the footer */
+        .footer-bg {
+            background-color: #333; /* Set the background color of the footer */
+            color: #fff; /* Set the text color of the footer */
+            padding: 20px 0; /* Set top and bottom padding of the footer */
+        }
+
+        .footer-top {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .footer-widget {
+            width: 100%;
+            max-width: 300px; /* Set the maximum width of the widget */
+            margin-bottom: 30px;
+        }
+
+        .f-widget-title img {
+            max-width: 100%;
+            transition: all 0.3s ease-out 0s;
+        }
+        .f-contact ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .f-contact li {
+            margin-bottom: 10px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 767px) {
+            .footer-widget {
+                width: 100%;
+                text-align: center;
+            }
+
+            .footer-widget img {
+                margin: 0 auto;
+            }
+        }
+    </style>
 
 
 
@@ -456,11 +682,64 @@ font-size:36px;
 
 
 
+<script>
+    $(document).ready(function () {
+        $('#contactModal').modal('show');
+    });
+</script>
 
+<script>
+    // Check if $ is defined
+    if (typeof jQuery != 'undefined') {
+        // Use $ alias in this scope
+        (function ($) {
+            $(document).ready(function () {
+                $('#contactModal').modal('show');
+            });
 
+            $("#contactForm").submit(function (e) {
+                e.preventDefault();
 
+                var formData = $(this).serialize();
 
- 
+                $.ajax({
+                    type: "POST",
+                    url: "index.php",
+                    data: formData,
+                    success: function (response) {
+                        $("#responseMessage").html(response);
+                        // You can also reset the form if needed
+                        // $("#contactForm")[0].reset();
+                    },
+                    error: function (error) {
+                        console.log("Error:", error);
+                    }
+                });
+            });
+        })(jQuery);
+    } else {
+        console.error('jQuery is not defined!');
+    }
+</script>
+<script>
+    // Function to hide the message after 10 seconds
+    function hideMessage() {
+        var message = document.getElementById('form-message');
+        if (message) {
+            message.style.display = 'none';
+        }
+    }
+
+    // Execute the hideMessage function after 10 seconds
+    setTimeout(hideMessage, 10000);
+</script>
+ <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
+ <script>
+    function loadGoogleTranslate(){
+        new google.translate.TranslateElement("google_element");
+    }
+ </script>
+
 <!-- Optional JavaScript --> 
 <!-- jQuery first, then Popper.js, then Bootstrap JS --> 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" ></script>
@@ -468,3 +747,5 @@ font-size:36px;
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" ></script>
 </body>
 </html>
+
+
