@@ -105,12 +105,17 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
+            
             <div class="modal-body" style="height: 100%; margin-bottom: 20px;">
                 <!-- Your form code goes here -->
+                
                 <form id="contactForm" class="container" style="width: 260px;">
+                
                     <h3 class="modal-title text-white text-center" id="contactModalLabel" style="color: #000 !important; margin-bottom: 10px;">Contact Us</h3>
                     <div>
                         <h6 class="text-white text-center pt-3 pb-4 small font-weight-bold" style="color: #000 !important;">Premium Umrah Package Bismillah Karo</h6>
+                        
+
                         <div id="responseMessage"></div>
                     </div>
                     <div class="row">
@@ -171,6 +176,40 @@
             background-size: 143% !important; /* Adjust the percentage as needed */
         }
     }
+    @media (min-width: 600px) and (max-width: 1024px) {
+        #contactModal .modal-content {
+            background-size: 143% !important; /* Adjust the percentage as needed */
+        }
+    }
+    @media (min-width: 414px) and (max-width: 896px) {
+        #contactModal .modal-content {
+            height: 71vh !important;
+        }
+    }
+    @media (min-width: 412px) and (max-width: 915px) {
+        #contactModal .modal-content {
+            height: 71vh !important;
+        }
+    }
+    @media (min-width: 360px) and (max-width: 740px) {
+        #contactModal .modal-content {
+            height: 78vh !important;
+        }
+    }
+    @media (min-width: 412px) and (max-width: 915px) {
+        #contactModal .modal-content {
+            height: 69vh !important;
+        }
+    }
+    @media (min-width: 768px) and (max-width: 1024px) {
+        #contactModal .modal-content {
+            height: 54vh !important;
+        }
+        #contactModal .modal-content {
+            background-size: 165% !important; /* Adjust the percentage as needed */
+        }
+    }
+  
 </style>
 <!-- end modal  -->
 
@@ -183,6 +222,7 @@
                 <p class="lead mb-5 text-black-50" style="color: #fff !important;">
                 Book with Best Umrah Tour Company in Pune 
                 </p>
+                
                 <div class="d-flex justify-content-center mb-4">
                     <button class="btn btn-lg btn-danger mr-2 custom-btn" data-toggle="modal" data-target="#contactModal">Inquire Now</button>
                 </div>
@@ -629,6 +669,39 @@ li {
     });
 </script>
 
+<script>
+    // Check if $ is defined
+    if (typeof jQuery != 'undefined') {
+        // Use $ alias in this scope
+        (function ($) {
+            $(document).ready(function () {
+                $('#contactModal').modal('show');
+            });
+
+            $("#contactForm").submit(function (e) {
+                e.preventDefault();
+
+                var formData = $(this).serialize();
+
+                $.ajax({
+                    type: "POST",
+                    url: "index.php",
+                    data: formData,
+                    success: function (response) {
+                        $("#responseMessage").html(response);
+                        // You can also reset the form if needed
+                        // $("#contactForm")[0].reset();
+                    },
+                    error: function (error) {
+                        console.log("Error:", error);
+                    }
+                });
+            });
+        })(jQuery);
+    } else {
+        console.error('jQuery is not defined!');
+    }
+</script>
  <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
  <script>
     function loadGoogleTranslate(){
