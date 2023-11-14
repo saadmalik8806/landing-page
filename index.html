@@ -1,4 +1,5 @@
 
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -95,19 +96,19 @@
 <div id="google_element"></div>
 
 <!-- The Modal -->
-
+<!-- The Modal -->
 <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="contactModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content" style="background: url('images/home/1-01.png') center center; background-size: cover; height: 720px; width: 800px; border: none; position: relative;">
+        <div class="modal-content" style="background: url('images/home/1-01.png') center center; background-size: 86%; height: 100%; width: 100%; border: none; position: relative;">
             <div class="modal-header custom-modal-header">
-                <button type="button" class="close ml-5" data-dismiss="modal" aria-label="Close" style="margin-left: 34rem !important; color:#fff;">
+                <button type="button" class="close ml-2" data-dismiss="modal" aria-label="Close" style="color: #fff;">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div class="modal-body" style="height: 100%; margin-bottom:20px;">
+            <div class="modal-body" style="height: 100%; margin-bottom: 20px;">
                 <!-- Your form code goes here -->
-                <form  id="contactForm" style="width: 43%; margin: auto; margin-top: 71px;">
-                    <h3 class="modal-title text-white text-center" id="contactModalLabel" style="color: #000 !important; margin-bottom:10px;">Contact Us</h3>
+                <form id="contactForm" class="container" style="width: 260px;">
+                    <h3 class="modal-title text-white text-center" id="contactModalLabel" style="color: #000 !important; margin-bottom: 10px;">Contact Us</h3>
                     <div>
                         <h6 class="text-white text-center pt-3 pb-4 small font-weight-bold" style="color: #000 !important;">Premium Umrah Package Bismillah Karo</h6>
                         <div id="responseMessage"></div>
@@ -128,111 +129,51 @@
                             <button class="btn btn-danger btn-lg w-100 mt-3 mt-sm-4 custom-btn" type="submit" id="submit-btn">Inquire Now <i class="lni lni-arrow-right ml-2"></i></button>
                         </div>
                     </div>
-                    
                 </form>
             </div>
         </div>
     </div>
 </div>
+
 <style>
     .custom-modal-header {
         border: none;
     }
-    .custom-modal-header {
-        border: none;
-    }
 
-  /* Extra small devices (phones) */
-  @media only screen and (max-width: 576px) {
-        #contactModal .modal-dialog {
-            max-width: 90%;
-            margin: auto;
-        }
-
-        #contactModal .modal-content {
-            width: 100%;
-            height: 100%;
-            background-size: contain;
-        }
-
-        #contactForm {
-            width: 90%;
-            margin: auto;
-        }
-    }
-
-    /* Small devices (landscape phones, 576px and up) */
-    @media only screen and (min-width: 577px) and (max-width: 767px) {
-        #contactModal .modal-dialog {
-            max-width: 80%;
-            margin: auto;
-        }
-
-        #contactForm {
-            width: 80%;
-            margin: auto;
-        }
-    }
-
-    /* Medium devices (tablets, 768px and up) */
-    @media only screen and (min-width: 768px) and (max-width: 991px) {
-        #contactModal .modal-dialog {
-            max-width: 70%;
-            margin: auto;
-        }
-
-        #contactForm {
-            width: 70%;
-            margin: auto;
-        }
-    }
-
-    /* Large devices (desktops, 992px and up) */
-    @media only screen and (min-width: 992px) and (max-width: 1199px) {
-        #contactModal .modal-dialog {
-            max-width: 60%;
-            margin: auto;
-        }
-
-        #contactForm {
-            width: 60%;
-            margin: auto;
-        }
-    }
-
-    /* Extra large devices (large desktops, 1200px and up) */
-    @media only screen and (min-width: 1200px) {
-        #contactModal .modal-dialog {
-            max-width: 50%;
-            margin: auto;
-        }
-
-        #contactForm {
-            width: 50%;
-            margin: auto;
-        }
-    }
-     /* Responsive styles */
-     @media (max-width: 576px) {
+    /* Responsive styles */
+    @media (max-width: 576px) {
         #contactModal .modal-dialog {
             max-width: 100%;
             margin: auto;
         }
 
         #contactModal .modal-content {
-            width: 100vw;
-            height: 100vh;
-            background-size: cover;
+            width: 100vw !important;
+            height: 91vh !important;
+            background-size: 192% !important; /* Adjusted for full width */
         }
 
         #contactForm {
-            width: 80%;
+            width: 82% !important;
             margin: auto;
             margin-top: 5vh;
+        }
+        #contactForm h3{
+            margin-bottom: -1px;
+            font-size: 1rem;
+        }
+        #contactForm h6{
+            padding-bottom:0.5rem !important
+        }
+    }
+    @media (min-width: 768px) and (max-width: 805px) {
+        #contactModal .modal-content {
+            background-size: 143% !important; /* Adjust the percentage as needed */
         }
     }
 </style>
 <!-- end modal  -->
+
 <div class="banner-image py-5">
     <div class="overlay"></div>
     <div class="container py-5">
@@ -688,51 +629,6 @@ li {
     });
 </script>
 
-<script>
-    // Check if $ is defined
-    if (typeof jQuery != 'undefined') {
-        // Use $ alias in this scope
-        (function ($) {
-            $(document).ready(function () {
-                $('#contactModal').modal('show');
-            });
-
-            $("#contactForm").submit(function (e) {
-                e.preventDefault();
-
-                var formData = $(this).serialize();
-
-                $.ajax({
-                    type: "POST",
-                    url: "index.php",
-                    data: formData,
-                    success: function (response) {
-                        $("#responseMessage").html(response);
-                        // You can also reset the form if needed
-                        // $("#contactForm")[0].reset();
-                    },
-                    error: function (error) {
-                        console.log("Error:", error);
-                    }
-                });
-            });
-        })(jQuery);
-    } else {
-        console.error('jQuery is not defined!');
-    }
-</script>
-<script>
-    // Function to hide the message after 10 seconds
-    function hideMessage() {
-        var message = document.getElementById('form-message');
-        if (message) {
-            message.style.display = 'none';
-        }
-    }
-
-    // Execute the hideMessage function after 10 seconds
-    setTimeout(hideMessage, 10000);
-</script>
  <script src="https://translate.google.com/translate_a/element.js?cb=loadGoogleTranslate"></script>
  <script>
     function loadGoogleTranslate(){
